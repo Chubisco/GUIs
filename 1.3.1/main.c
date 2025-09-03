@@ -32,13 +32,13 @@ int main (int argc, char* args[])
         filledEllipseRGBA(ren, xf3,50, 7,10, 255, 201, 251, 255); //fantasminha rosa//
         filledEllipseRGBA(ren, xf4,50, 7,10, 255, 153, 0, 255); //fantasminha laranja//
         SDL_RenderPresent(ren);
-        SDL_Delay(150);
+        SDL_Delay(200);
         open = !open;
-        xpacman += 4;
-        xf1 += 4;
-        xf2 += 4;
-        xf3 += 4;
-        xf4 += 4;
+        xpacman += 2;
+        xf1 += 2;
+        xf2 += 2;
+        xf3 += 2;
+        xf4 += 2;
         
     }
 
