@@ -22,7 +22,7 @@ int main (int argc, char* args[])
     int xf3 = 140;
     int xf4 = 165;
     
-    while (xpacman < 210) {
+    while (xf1 < 210) {
         SDL_SetRenderDrawColor(ren, 0xFF,0xFF,0xFF,0x00);
         SDL_RenderClear(ren);
 
