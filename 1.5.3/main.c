@@ -13,7 +13,7 @@ int main (int argc, char* args[])
     SDL_Renderer* ren = SDL_CreateRenderer(win, -1, SDL_RENDERER_ACCELERATED);
 
     /* EXECUÇÃO */
-    int espera = 500;
+    int espera = 200;
     int go = 1;
     int open = 1;
     int xpacman = 40;
@@ -51,7 +51,7 @@ int main (int argc, char* args[])
                 }
         } else {
             if (go) {
-            SDL_Delay(200);
+            espera = 200;
             open = !open;
             xpacman += 2;
             xf1 += 2;
@@ -59,7 +59,7 @@ int main (int argc, char* args[])
             xf3 += 2;
             xf4 += 2;
             } else {
-                SDL_Delay(2000);
+                espera = 2000;
                 go = 1;
                  }
           }
