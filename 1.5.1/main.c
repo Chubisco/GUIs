@@ -86,7 +86,7 @@ int main (int argc, char* args[])
                 rMouse.y = evt.motion.y - rMouse.h/2;
             }     
         }
-        else if (isevt == 0) {
+        else if (!isevt) {
               if (rTempo.x <= 170) {
                 espera = 500;
                 rTempo.x += 5;
