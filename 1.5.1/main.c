@@ -29,9 +29,9 @@ int main (int argc, char* args[])
     
         SDL_SetRenderDrawColor(ren, 0xFF,0xFF,0xFF,0x00);
         SDL_RenderClear(ren);
-        SDL_SetRenderDrawColor(ren, 0x00,0x00,0xFF,0x00);
+        SDL_SetRenderDrawColor(ren, 0xfc,0xba,0x03,0x00);
         SDL_RenderFillRect(ren, &rTempo);
-        SDL_SetRenderDrawColor(ren, 0x00,0x00,0xFF,0x00);
+        SDL_SetRenderDrawColor(ren, 0x07,0xfc,0x03,0x00);
         SDL_RenderFillRect(ren, &rTeclado);
         SDL_SetRenderDrawColor(ren, 0x00,0x00,0xFF,0x00);
         SDL_RenderFillRect(ren, &rMouse);
@@ -61,7 +61,7 @@ int main (int argc, char* args[])
                         break;
                     case SDLK_F4:
                         if (evt.key.keysym.mod & KMOD_ALT){
-                        running = false;
+                        running = 0;
                         }
                         break;
                 }
@@ -79,24 +79,25 @@ int main (int argc, char* args[])
               }
             }
             else if (evt.type == SDL_QUIT){
-                running = false;
+                running = 0;
             }
             else if (evt.type == SDL_MOUSEMOTION){
                 rMouse.x = evt.motion.x - rMouse.w/2;
                 rMouse.y = evt.motion.y - rMouse.h/2;
-            }
-            #else {
+            }     
+        }
+        else if (isevt == 0) {
               if (rTempo.x <= 170) {
-                SDL_Delay(500);
+                espera = 500;
                 rTempo.x += 5;
                 rTempo.y += 5;
               }
               else {
+              espera = 500;
               rTempo.x -= 5;
               rTempo.y -= 5;
               }
             }
-    }
 }
     /* FINALIZACAO */
     SDL_DestroyRenderer(ren);
