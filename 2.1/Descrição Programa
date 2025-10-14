@@ -1,0 +1,3 @@
+O programa movimenta o quadrado rosa baseado nos cliques do mouse...
+Cliques Simples: Fazem o quadrado pular um pouco no eixo Y. (há também gravidade para que o quadrado retorne à sua altura original).
+Cliques Duplo: Fazem o quadrado dar um "dash" (movimento rápido) no eixo X, para o lado em que o mouse estiver em relação ao quadrado.
